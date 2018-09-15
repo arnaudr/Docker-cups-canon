@@ -1,4 +1,4 @@
-# quadportnick/cups-airprint
+# arnaudr/docker-cups-canon
 
 This Ubuntu-based Docker image runs a CUPS instance that is meant as an AirPrint relay for printers that are already on the network but not AirPrint capable. I'm using it on a Synology NAS because the built in server doesn't work properly with my printers. The local Avahi will be utilized for advertising the printers on the network.
 
