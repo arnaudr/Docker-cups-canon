@@ -8,4 +8,4 @@ script:
 # build image
 - docker build -t arnaudr/docker-cups-canon .
 # test image
-- docker run arnaudr/docker-cups-canon --version
+- docker run arnaudr/docker-cups-canon
