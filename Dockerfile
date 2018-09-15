@@ -1,4 +1,4 @@
-FROM ubuntu:trusty
+FROM resin/rpi-raspbian
 
 
 # Add repos
