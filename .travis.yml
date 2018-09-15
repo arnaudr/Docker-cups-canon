@@ -8,7 +8,7 @@ script:
 # prepare qemu
 - docker run --rm --privileged multiarch/qemu-user-static:register --reset
 # build image
-- docker build -t docker-cups-canon .
+- docker build -t arnaudr/docker-cups-canon:build .
 # test image
 #- docker run arnaudr/docker-cups-canon
 
@@ -19,6 +19,8 @@ before_deploy:
   - docker login -u "$DOCKER_USER" -p "$DOCKER_PASS"
 deploy:
   provider: script
-  script: docker push arnaudra/docker-cups-canon
+  script: 
+  - docker tag arnaudr/docker-cups-canon:build arnaudra/docker-cups-canon:latest
+  - docker push arnaudra/docker-cups-canon
   on:
 branch: master
